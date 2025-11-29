@@ -88,25 +88,61 @@ Responsibility: Turn raw documents into high-quality training pairs.
 
 ### 4.1. Directory Structure
 
-```Plaintext
-
 opensem/
-├── configs/            # YAML configs for Training and Evals
-│   ├── train_config.yaml
-│   └── eval_config.yaml
+
+#### Multi-SEM Project Separation
+
+To support the creation and management of multiple Small Expert Models (SEMs) within the same OpenSEM instance, each SEM project should have its own subdirectory under the main folders (`data`, `models`, `configs`, etc.). This keeps data, configs, and model outputs isolated, while core scripts are reused across projects.
+
+
+**Example structure for multiple SEMs:**
+
+```Plaintext
+opensem/
+├── configs/
+│   ├── sem1/
+│   │   ├── train_config.yaml
+│   │   └── eval_config.yaml
+│   ├── sem2/
+│   │   ├── train_config.yaml
+│   │   └── eval_config.yaml
 ├── data/
-│   ├── raw/            # PDF/TXT source files
-│   ├── processed/      # JSONL ready for training
-│   └── golden/         # Human-verified eval sets
+│   ├── sem1/
+│   │   ├── raw/
+│   │   ├── processed/
+│   │   └── golden/
+│   ├── sem2/
+│   │   ├── raw/
+│   │   ├── processed/
+│   │   └── golden/
 ├── models/
-│   ├── base/           # Cached base models
-│   └── adapters/       # Your fine-tuned outputs
+│   ├── sem1/
+│   │   ├── base/
+│   │   └── adapters/
+│   ├── sem2/
+│   │   ├── base/
+│   │   └── adapters/
+├── scripts/           # Utility scripts for setup, automation, etc.
 ├── src/
-│   ├── forge.py        # Data synthesis logic
-│   ├── train.py        # Unsloth training wrapper
-│   └── judge.py        # Promptfoo wrapper
+│   ├── forge.py
+│   ├── train.py
+│   └── judge.py
 └── requirements.txt
 ```
+
+**CLI Application:**
+- A CLI app (`opensem-cli`) will be available from the project root to automate common tasks such as creating new SEM projects, running data forge, training, and evaluation. This improves usability and reproducibility.
+
+**Notes:**
+- Each SEM (e.g., `sem1`, `sem2`) has its own data, configs, and model outputs.
+- Core scripts in `src/` are reused, but take project-specific paths/configs as input.
+- Utility scripts in `scripts/` can automate setup and maintenance.
+- The CLI app orchestrates workflows and project management from the root.
+
+**Notes:**
+- Each SEM (e.g., `sem1`, `sem2`) has its own data, configs, and model outputs.
+- Core scripts in `src/` are reused, but take project-specific paths/configs as input.
+- This structure keeps projects isolated, supports parallel development, and makes it easy to add new SEMs.
 
 ### 4.2. Selected Technologies
 
@@ -119,6 +155,8 @@ opensem/
 - Evaluation: Promptfoo (Node.js tool, wrapped via Python subprocess or run independently).
 
 - Tracking: Weights & Biases (wandb).
+
+- CLI & Automation: Python-based CLI app (`opensem-cli`) and utility scripts in `scripts/` for project setup, management, and workflow automation.
 
 5. MVP Workflow (The "Happy Path")
 
