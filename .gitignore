@@ -41,3 +41,5 @@ Thumbs.db
 
 # Ignore configs if needed
 configs/*.secret.yaml
+site/
+.ipynb_checkpoints/
