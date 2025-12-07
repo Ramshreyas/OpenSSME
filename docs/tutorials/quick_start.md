@@ -5,25 +5,26 @@ This guide will get you up and running with OpenSEM in minutes.
 ## Prerequisites
 
 *   Python 3.10+
+*   Conda (Miniconda or Anaconda)
 *   A Google Gemini API Key (for the default Data Forge strategy)
 
 ## Installation
 
 1.  **Clone the Repository** (or download the source):
     ```bash
-    git clone https://github.com/Ramshreyas/OpenSEM.git
-    cd OpenSEM
+    git clone https://github.com/Ramshreyas/OpenSSME.git
+    cd OpenSSME
     ```
 
-2.  **Set up a Virtual Environment**:
+2.  **Initialize Workspace & Environment**:
+    Run the initialization command. This will create the necessary directory structure and set up a Conda environment named `opensem` with all dependencies installed.
     ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
+    python opensem.py init
     ```
 
-3.  **Install Dependencies**:
+3.  **Activate the Environment**:
     ```bash
-    pip install -r requirements.txt
+    conda activate opensem
     ```
 
 4.  **Set up Environment Variables**:
@@ -37,7 +38,7 @@ This guide will get you up and running with OpenSEM in minutes.
 All commands are run via the `opensem.py` CLI tool.
 
 ### 1. Initialize Workspace
-If you are starting fresh, initialize the workspace structure:
+(If you skipped step 2 above)
 ```bash
 python opensem.py init
 ```

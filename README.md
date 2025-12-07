@@ -12,21 +12,32 @@ OpenSSME is a light-weight framework for creating Small Expert Models. It provid
 ## Getting Started
 
 ### Prerequisites
-- Python 3.7+
-- (Optional) Create a virtual environment:
-  ```bash
-  python3 -m venv venv
-  source venv/bin/activate
-  ```
-- Install dependencies:
-  ```bash
-  pip install -r requirements.txt
-  ```
+- Python 3.10+
+- Conda (Miniconda or Anaconda)
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Ramshreyas/OpenSSME.git
+   cd OpenSSME
+   ```
+
+2. Initialize the workspace and environment:
+   ```bash
+   python opensem.py init
+   ```
+   This command will create the necessary folder structure and a Conda environment named `opensem` with all dependencies installed.
+
+3. Activate the environment:
+   ```bash
+   conda activate opensem
+   ```
 
 ### Usage
 All commands are run from the project root using the CLI entry point `opensem.py`:
 
 #### 1. Initialize the workspace
+(If you haven't already done so in the installation step)
 ```bash
 python opensem.py init
 ```
