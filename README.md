@@ -1,6 +1,6 @@
-# OpenSEM
+# OpenSSME
 
-OpenSEM is a light-weight framework for creating Small Expert Models. It provides simple commands to initialize workspaces, create projects, add data, and manage configurations.
+OpenSSME is a light-weight framework for creating Small Expert Models. It provides simple commands to initialize workspaces, create projects, add data, and manage configurations.
 
 ## Features
 - Initialize SEM workspace
