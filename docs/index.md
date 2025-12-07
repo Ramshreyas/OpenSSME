@@ -1,8 +1,8 @@
-# OpenSEM
+# OpenSSME
 
-**OpenSEM** (Open Source Small Expert Models) is a lightweight, extensible framework designed to be the "factory" for creating Small Expert Models (SEMs).
+**OpenSSME** (Open Source Small Model Expert) is a lightweight, extensible framework designed to be the "factory" for creating Small Expert Models (SEMs).
 
-In a world dominated by massive General Purpose LLMs, OpenSEM empowers developers to build specialized, efficient, and domain-specific models that run faster and cheaper.
+In a world dominated by massive General Purpose LLMs, OpenSSME empowers developers to build specialized, efficient, and domain-specific models that run faster and cheaper.
 
 ## Core Philosophy
 
@@ -12,7 +12,7 @@ In a world dominated by massive General Purpose LLMs, OpenSEM empowers developer
 
 ## The Pipeline
 
-OpenSEM divides the model creation process into three distinct stages:
+OpenSSME divides the model creation process into three distinct stages:
 
 1.  **Data Forge** (Current Focus):
     *   Ingest raw data (PDFs, Text, Markdown).

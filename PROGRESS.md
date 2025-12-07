@@ -1,4 +1,4 @@
-# OpenSEM MVP Progress Tracker
+# OpenSSME MVP Progress Tracker
 
 This file breaks down the MVP implementation into fine-grained, actionable tasks. As tasks are completed, mark them as **[x]** and add notes as needed. The structure supports multiple SEM projects using shared scaffolding.
 
@@ -11,7 +11,7 @@ This file breaks down the MVP implementation into fine-grained, actionable tasks
 [x] Create `requirements.txt` and install base dependencies
 [x] Create template configs (`train_config.yaml`, `eval_config.yaml`)
 [x] Create `scripts/` folder for utility scripts (e.g., new project creation, data formatting)
-[x] Plan CLI app (`opensem-cli`) for project and workflow management
+[x] Plan CLI app (`openssme-cli`) for project and workflow management
 [x] Design CLI commands: `init`, `new-project`, `run-forge`, `train`, `evaluate`, etc.
 [x] Implement basic CLI app structure in `src/` or as standalone entry point
 [x] Create README

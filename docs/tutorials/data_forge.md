@@ -1,10 +1,10 @@
 # Data Forge Tutorial
 
-The **Data Forge** is the first stage of the OpenSEM pipeline. Its job is to transform raw, unstructured data into high-quality, structured training data (Instruction-Input-Output pairs).
+The **Data Forge** is the first stage of the OpenSSME pipeline. Its job is to transform raw, unstructured data into high-quality, structured training data (Instruction-Input-Output pairs).
 
 ## Standard Flow: Text Synthesis
 
-By default, OpenSEM uses the `TextForge` strategy.
+By default, OpenSSME uses the `TextForge` strategy.
 
 1.  **Input**: Text files, Markdown files, or PDFs in `data/<project>/raw`.
 2.  **Process**:
@@ -26,7 +26,7 @@ params:
 
 ## Advanced Flow: Custom Strategies
 
-OpenSEM shines when you need to do something specific. Let's say you want to build a model that **redacts PII (Personally Identifiable Information)**. You don't just want generic synthesis; you want a specific transformation.
+OpenSSME shines when you need to do something specific. Let's say you want to build a model that **redacts PII (Personally Identifiable Information)**. You don't just want generic synthesis; you want a specific transformation.
 
 ### 1. Create a Custom Forge Class
 

@@ -1,5 +1,5 @@
 site_name: OpenSSME
-site_description: Open Source Small Expert Models Factory
+site_description: Open Source Small Model Expert Factory
 theme:
   name: material
   features:

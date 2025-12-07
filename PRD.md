@@ -1,7 +1,7 @@
-# Product Requirements Document: OpenSEM (v0.1)
-# NOTE: OpenSEM is a Python-only project for now. All orchestration, automation, and tooling should be implemented in Python. Any references to Node.js or JS tools are for future consideration and should not be implemented at this stage.
+# Product Requirements Document: OpenSSME (v0.1)
+# NOTE: OpenSSME is a Python-only project for now. All orchestration, automation, and tooling should be implemented in Python. Any references to Node.js or JS tools are for future consideration and should not be implemented at this stage.
 
-| **Project Name** | OpenSEM (Open Source Small Expert Models) |
+| **Project Name** | OpenSSME (Open Source Small Model Expert) |
 | :--- | :--- |
 | **Version** | 0.1 (MVP) |
 | **Status** | Draft |
@@ -9,7 +9,7 @@
 | **Core Philosophy** | "Data is the programming language; the model is the compiler." |
 
 ## 1. Executive Summary
-OpenSEM is a modular, local-first "factory" pipeline designed to create high-performance, domain-specific Small Language Models (SLMs) (<8B parameters). Unlike general fine-tuning scripts, OpenSEM treats model creation as a software engineering lifecycle: **Data Engineering → Baseline Eval → Training → Regression Testing.**
+OpenSSME is a modular, local-first "factory" pipeline designed to create high-performance, domain-specific Small Language Models (SLMs) (<8B parameters). Unlike general fine-tuning scripts, OpenSSME treats model creation as a software engineering lifecycle: **Data Engineering → Baseline Eval → Training → Regression Testing.**
 
 The goal of v0.1 is to establish a functional end-to-end loop that allows a user to take raw text data and produce a fine-tuned, evaluated model using an RTX 4090.
 

@@ -1,13 +1,13 @@
 # Architecture
 
-OpenSEM is designed to be modular. Understanding the project structure and the underlying design patterns will help you get the most out of the framework.
+OpenSSME is designed to be modular. Understanding the project structure and the underlying design patterns will help you get the most out of the framework.
 
 ## Project Structure
 
-When you initialize an OpenSEM workspace, you get a standard structure:
+When you initialize an OpenSSME workspace, you get a standard structure:
 
 ```text
-opensem_workspace/
+openssme_workspace/
 ├── opensem.py              # The CLI entry point
 ├── configs/                # Configuration files for your projects
 │   └── my_project/
@@ -25,7 +25,7 @@ opensem_workspace/
 
 ## The Strategy Pattern
 
-The heart of OpenSEM's extensibility is the **Strategy Pattern**. We define abstract base classes (Interfaces) for key components, and you can provide your own implementations.
+The heart of OpenSSME's extensibility is the **Strategy Pattern**. We define abstract base classes (Interfaces) for key components, and you can provide your own implementations.
 
 ### The `BaseForge` Interface
 
@@ -49,7 +49,7 @@ class BaseForge(ABC):
 *   **Default Implementation**: `TextForge` is the default strategy. It loads text/PDFs and uses an LLM to synthesize instruction pairs.
 *   **Custom Implementation**: You can write a `PIIMaskingForge`, `ImageCaptioningForge`, or `FinancialForecastingForge` by simply inheriting from `BaseForge` and implementing these three methods.
 
-You then tell OpenSEM which strategy to use in your `data_config.yaml`:
+You then tell OpenSSME which strategy to use in your `data_config.yaml`:
 
 ```yaml
 forge_class: "my_custom_module.MyForge"

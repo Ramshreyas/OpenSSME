@@ -10,7 +10,7 @@ import yaml
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src'))
 
 WORKSPACE_ROOT = os.path.dirname(os.path.abspath(__file__))
-PROJECT_FILE = os.path.join(WORKSPACE_ROOT, '.opensem_project')
+PROJECT_FILE = os.path.join(WORKSPACE_ROOT, '.openssme_project')
 
 def get_current_project():
     if os.path.exists(PROJECT_FILE):
@@ -149,7 +149,7 @@ def init_workspace():
         os.makedirs(path, exist_ok=True)
 
     # Create conda environment if it does not exist
-    env_name = "opensem"
+    env_name = "openssme"
     # Check if conda is available
     conda_check = os.system("conda --version > /dev/null 2>&1")
     if conda_check != 0:
@@ -168,7 +168,7 @@ def init_workspace():
     else:
         print(f"Conda environment '{env_name}' already exists.")
 
-    print("Initialized OpenSEM workspace.")
+    print("Initialized OpenSSME workspace.")
 
 def new_project(name):
     # Create SEM project subdirectories
@@ -196,11 +196,11 @@ params:
     set_current_project(name)
 
 def main():
-    parser = argparse.ArgumentParser(description='opensem')
+    parser = argparse.ArgumentParser(description='openssme')
     subparsers = parser.add_subparsers(dest='command')
 
     # init
-    subparsers.add_parser('init', help='Initialize OpenSEM workspace')
+    subparsers.add_parser('init', help='Initialize OpenSSME workspace')
     # new
     new_parser = subparsers.add_parser('new', help='Create a new SEM project')
     new_parser.add_argument('name', help='SEM project name')
